@@ -1,24 +1,56 @@
-import logo from './logo.svg';
+import SignIn from './components/auth/SignIn';
+import SignUp from './components/auth/SignUp';
+import Dashboard from './components/Dashboard';
+import AuthContext from './components/AuthContext';
+import NoPage from './components/NoPage';
+import Home from './components/Home';
+import Journals from './components/Journals';
+import React from 'react';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from 'react-router-dom';
 import './App.css';
+import { useState } from 'react';
 
 function App() {
+  const [journalEntries, setJournalEntries] = useState([]);
+
+  const changeJournalEntries = (newEntries) => {
+    setJournalEntries(newEntries);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div>
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route
+            path='/sign-in'
+            element={
+              <>
+                <SignIn />
+                <SignUp />
+                <AuthContext />
+              </>
+            }
+          />
+          {/* <Route path='/' element={<SignUp />} /> */}
+          {/* Protected route: Redirect to sign-in if not authenticated */}
+          <Route
+            path='/dashboard'
+            element={<Dashboard changeJournalEntries={changeJournalEntries} />}
+          />
+          <Route path='*' element={<NoPage />} />
+          <Route
+            path='/journals'
+            element={<Journals journalEntries={journalEntries} />}
+          />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 

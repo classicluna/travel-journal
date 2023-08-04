@@ -7,7 +7,7 @@ import Home from './components/Home';
 import Journals from './components/Journals';
 import React from 'react';
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Routes,
   Route,
   Navigate,

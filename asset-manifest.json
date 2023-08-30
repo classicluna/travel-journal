@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/travel-journal/static/css/main.e3ae3ee3.css",
-    "main.js": "/travel-journal/static/js/main.ec5d3274.js",
+    "main.css": "/travel-journal/static/css/main.12c8a34f.css",
+    "main.js": "/travel-journal/static/js/main.88b9f04c.js",
     "static/js/787.39019643.chunk.js": "/travel-journal/static/js/787.39019643.chunk.js",
     "static/media/pexels-eberhard-grossgasteiger-1287145.jpg": "/travel-journal/static/media/pexels-eberhard-grossgasteiger-1287145.ab37a18ed4f2b8aa3e1f.jpg",
     "index.html": "/travel-journal/index.html",
-    "main.e3ae3ee3.css.map": "/travel-journal/static/css/main.e3ae3ee3.css.map",
-    "main.ec5d3274.js.map": "/travel-journal/static/js/main.ec5d3274.js.map",
+    "main.12c8a34f.css.map": "/travel-journal/static/css/main.12c8a34f.css.map",
+    "main.88b9f04c.js.map": "/travel-journal/static/js/main.88b9f04c.js.map",
     "787.39019643.chunk.js.map": "/travel-journal/static/js/787.39019643.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e3ae3ee3.css",
-    "static/js/main.ec5d3274.js"
+    "static/css/main.12c8a34f.css",
+    "static/js/main.88b9f04c.js"
   ]
 }

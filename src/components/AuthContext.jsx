@@ -46,6 +46,12 @@ export const AuthContext = ({ children }) => {
       <button className='home-button' onClick={() => navigate('/')}>
         Home
       </button>
+      <button
+        className='dashboard-button'
+        onClick={() => navigate('/dashboard')}
+      >
+        Dashboard
+      </button>
     </div>
   );
 };

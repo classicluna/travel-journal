@@ -1,0 +1,21 @@
+h1 {
+  margin: auto;
+  width: 50%;
+  border: 3px solid darkviolet;
+  padding: 10px;
+  text-align: center;
+}
+.entry-list {
+  list-style: none;
+  padding: 0;
+}
+
+.entry-list li {
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-size: 16px;
+  line-height: 1.4;
+}

@@ -5,13 +5,9 @@ import AuthContext from './components/AuthContext';
 import NoPage from './components/NoPage';
 import Home from './components/Home';
 import Journals from './components/Journals';
+import ForgotPassword from './components/ForgotPassword';
 import React from 'react';
-import {
-  HashRouter as Router,
-  Routes,
-  Route,
-  Navigate,
-} from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 import { useState } from 'react';
 
@@ -32,12 +28,19 @@ function App() {
             element={
               <>
                 <SignIn />
+                <AuthContext />
+              </>
+            }
+          />
+          <Route
+            path='/sign-up'
+            element={
+              <>
                 <SignUp />
                 <AuthContext />
               </>
             }
           />
-          {/* <Route path='/' element={<SignUp />} /> */}
           {/* Protected route: Redirect to sign-in if not authenticated */}
           <Route
             path='/dashboard'
@@ -48,6 +51,7 @@ function App() {
             path='/journals'
             element={<Journals journalEntries={journalEntries} />}
           />
+          <Route path='/forgot-password' element={<ForgotPassword />} />
         </Routes>
       </div>
     </Router>
